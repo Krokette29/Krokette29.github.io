@@ -1871,7 +1871,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff3eff;
+  background: #f71ad0;
 }
 .feed-link,
 .chat {
@@ -3071,5 +3071,5 @@ ul.breadcrumb li+li:last-child {
 body {
   background: url("https://images.unsplash.com/photo-1510843572979-e4b9e790fdd7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1993&q=80");
   background-attachment: fixed;
-  background-position: 0% 100%;
+  background-position: 100% 100%;
 }
