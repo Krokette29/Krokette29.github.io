@@ -112,7 +112,7 @@
 <meta property="og:description" content="Leancloud用于统计博客访问量以及提供评论支持。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://wx3.sinaimg.cn/mw690/9df210e9gy1g3ebfh5facj20d704m3yf.jpg">
-<meta property="og:updated_time" content="2019-05-25T23:35:46.155Z">
+<meta property="og:updated_time" content="2019-05-26T09:36:58.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo-NexT主题下Leancloud的使用教程">
 <meta name="twitter:description" content="Leancloud用于统计博客访问量以及提供评论支持。">
@@ -416,7 +416,7 @@
                 
               
 
-              <time title="创建时间：2019-05-26 00:31:27 / 修改时间：01:35:46" itemprop="dateCreated datePublished" datetime="2019-05-26T00:31:27+02:00">2019-05-26</time>
+              <time title="创建时间：2019-05-26 00:31:27 / 修改时间：11:36:58" itemprop="dateCreated datePublished" datetime="2019-05-26T00:31:27+02:00">2019-05-26</time>
             
 
             
@@ -503,7 +503,8 @@
 <a id="more"></a>
 
 <h1 id="Leancloud账户创建"><a href="#Leancloud账户创建" class="headerlink" title="Leancloud账户创建"></a>Leancloud账户创建</h1><p><a href="https://leancloud.cn/" target="_blank" rel="noopener">Leancloud官网地址</a><br>使用免费的注册就行。注册之后参照下面教程进行配置。</p>
-<h1 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h1><p>NexT主题的评论功能有很多插件能够实现，一番折腾后感觉还是Valine最好用，它是基于Leancloud的。<br><strong>主要步骤</strong>：</p>
+<h1 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h1><p>NexT主题的评论功能有很多插件能够实现，一番折腾后感觉还是Valine最好用，它是基于Leancloud的。</p>
+<p><strong>主要步骤</strong>：</p>
 <ul>
 <li>在Leancloud中创建应用，名字随意</li>
 <li>在<code>设置-&gt;应用key</code>中找到appid和appkey</li>
@@ -511,9 +512,10 @@
 <li>在Leancloud设置的安全中心把自己的域名加到<code>Web安全域名</code>中</li>
 </ul>
 <p>参考教程：<a href="https://www.bluelzy.com/articles/use_valine_for_your_blog.html" target="_blank" rel="noopener">为你的Hexo加上评论系统-Valine</a></p>
-<h1 id="统计博客访问量（仍存在问题）"><a href="#统计博客访问量（仍存在问题）" class="headerlink" title="统计博客访问量（仍存在问题）"></a>统计博客访问量（仍存在问题）</h1><p>同样基于Leancloud实现博客访问量的统计。<br>具体过程很复杂，请参照<a href="https://leaferx.online/2018/02/11/lc-security/" target="_blank" rel="noopener">官方教程（修复过）</a>。
+<h1 id="统计博客访问量"><a href="#统计博客访问量" class="headerlink" title="统计博客访问量"></a>统计博客访问量</h1><p>同样基于Leancloud实现博客访问量的统计。<br>具体过程很复杂，请参照<a href="https://leaferx.online/2018/02/11/lc-security/" target="_blank" rel="noopener">官方教程（修复过）</a>。
 在其中的<strong>进一步设置权限</strong>一步中，<strong>严格按照步骤执行</strong>！否则会出错！<br>并且其中的<strong>博客配置文件</strong>中的deploy项需要长的像下图：<br><img src="http://wx3.sinaimg.cn/mw690/9df210e9gy1g3ebfh5facj20d704m3yf.jpg"></p>
-<p><em>（ps. 最后仍然出现<code>Counter not initialized! More info at console err msg.</code>的问题，仍待解决。。。）</em></p>
+<h2 id="更新——解决Counter-not-initialized-More-info-at-console-err-msg-的问题"><a href="#更新——解决Counter-not-initialized-More-info-at-console-err-msg-的问题" class="headerlink" title="更新——解决Counter not initialized! More info at console err msg.的问题"></a>更新——解决<code>Counter not initialized! More info at console err msg.</code>的问题</h2><p>对于按照上面的教程一步一步到最后依然出现<code>Counter not initialized! More info at console err msg.</code>的问题的朋友们，如果暂时不在乎浏览量数据的安全程度的话，就把权限开放了吧（笑）。具体操作：<a href="https://leaferx.online/2018/02/11/lc-security/" target="_blank" rel="noopener">上文教程</a>中的<code>进一步设置权限（可选，建议设置）</code>一项，全部撤销，包括security设false、博客配置文件删除新增条目、<code>npm uninstall hexo-leancloud-counter-security</code>、Leancloud的Counter表权限全开。</p>
+<p>把权限都打开之后，就可以看到数据正常显示了。但是就有可能会有浏览量数据被篡改的风险。</p>
 
       
     </div>
@@ -783,7 +785,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Leancloud账户创建"><span class="nav-number">1.</span> <span class="nav-text">Leancloud账户创建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#评论系统"><span class="nav-number">2.</span> <span class="nav-text">评论系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#统计博客访问量（仍存在问题）"><span class="nav-number">3.</span> <span class="nav-text">统计博客访问量（仍存在问题）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Leancloud账户创建"><span class="nav-number">1.</span> <span class="nav-text">Leancloud账户创建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#评论系统"><span class="nav-number">2.</span> <span class="nav-text">评论系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#统计博客访问量"><span class="nav-number">3.</span> <span class="nav-text">统计博客访问量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#更新——解决Counter-not-initialized-More-info-at-console-err-msg-的问题"><span class="nav-number">3.1.</span> <span class="nav-text">更新——解决Counter not initialized! More info at console err msg.的问题</span></a></li></ol></li></ol></div>
             
 
           </div>
