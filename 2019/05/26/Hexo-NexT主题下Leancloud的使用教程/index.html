@@ -112,7 +112,7 @@
 <meta property="og:description" content="Leancloud用于统计博客访问量以及提供评论支持。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://wx3.sinaimg.cn/mw690/9df210e9gy1g3ebfh5facj20d704m3yf.jpg">
-<meta property="og:updated_time" content="2019-05-26T09:36:58.579Z">
+<meta property="og:updated_time" content="2019-05-26T09:38:57.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo-NexT主题下Leancloud的使用教程">
 <meta name="twitter:description" content="Leancloud用于统计博客访问量以及提供评论支持。">
@@ -416,7 +416,7 @@
                 
               
 
-              <time title="创建时间：2019-05-26 00:31:27 / 修改时间：11:36:58" itemprop="dateCreated datePublished" datetime="2019-05-26T00:31:27+02:00">2019-05-26</time>
+              <time title="创建时间：2019-05-26 00:31:27 / 修改时间：11:38:57" itemprop="dateCreated datePublished" datetime="2019-05-26T00:31:27+02:00">2019-05-26</time>
             
 
             
@@ -514,7 +514,7 @@
 <p>参考教程：<a href="https://www.bluelzy.com/articles/use_valine_for_your_blog.html" target="_blank" rel="noopener">为你的Hexo加上评论系统-Valine</a></p>
 <h1 id="统计博客访问量"><a href="#统计博客访问量" class="headerlink" title="统计博客访问量"></a>统计博客访问量</h1><p>同样基于Leancloud实现博客访问量的统计。<br>具体过程很复杂，请参照<a href="https://leaferx.online/2018/02/11/lc-security/" target="_blank" rel="noopener">官方教程（修复过）</a>。
 在其中的<strong>进一步设置权限</strong>一步中，<strong>严格按照步骤执行</strong>！否则会出错！<br>并且其中的<strong>博客配置文件</strong>中的deploy项需要长的像下图：<br><img src="http://wx3.sinaimg.cn/mw690/9df210e9gy1g3ebfh5facj20d704m3yf.jpg"></p>
-<h2 id="更新——解决Counter-not-initialized-More-info-at-console-err-msg-的问题"><a href="#更新——解决Counter-not-initialized-More-info-at-console-err-msg-的问题" class="headerlink" title="更新——解决Counter not initialized! More info at console err msg.的问题"></a>更新——解决<code>Counter not initialized! More info at console err msg.</code>的问题</h2><p>对于按照上面的教程一步一步到最后依然出现<code>Counter not initialized! More info at console err msg.</code>的问题的朋友们，如果暂时不在乎浏览量数据的安全程度的话，就把权限开放了吧（笑）。具体操作：<a href="https://leaferx.online/2018/02/11/lc-security/" target="_blank" rel="noopener">上文教程</a>中的<code>进一步设置权限（可选，建议设置）</code>一项，全部撤销，包括security设false、博客配置文件删除新增条目、<code>npm uninstall hexo-leancloud-counter-security</code>、Leancloud的Counter表权限全开。</p>
+<h2 id="更新——解决Counter-not-initialized-More-info-at-console-err-msg-的问题"><a href="#更新——解决Counter-not-initialized-More-info-at-console-err-msg-的问题" class="headerlink" title="更新——解决Counter not initialized! More info at console err msg.的问题"></a>更新——解决<code>Counter not initialized! More info at console err msg.</code>的问题</h2><p>对于按照上面的教程一步一步到最后依然出现<code>Counter not initialized! More info at console err msg.</code>的问题的朋友们，如果暂时不在乎浏览量数据的安全程度的话，就把权限开放了吧（笑）。<strong>具体操作：<a href="https://leaferx.online/2018/02/11/lc-security/" target="_blank" rel="noopener">上文教程</a>中的<code>进一步设置权限（可选，建议设置）</code>一项，全部撤销，包括security设false、博客配置文件删除新增条目、<code>npm uninstall hexo-leancloud-counter-security</code>、Leancloud的Counter表权限全开。</strong></p>
 <p>把权限都打开之后，就可以看到数据正常显示了。但是就有可能会有浏览量数据被篡改的风险。</p>
 
       
