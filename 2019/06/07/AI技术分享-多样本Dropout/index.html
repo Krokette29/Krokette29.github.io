@@ -103,13 +103,13 @@
 
 
 
-  <meta name="description" content="《Multi-Sample Dropout for Accelerated Trainingand Better Generalization》">
+  <meta name="description" content="《Multi-Sample Dropout for Accelerated Training and Better Generalization》">
 <meta name="keywords" content="神经网络,AI技术,论文">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AI技术分享-多样本Dropout">
 <meta property="og:url" content="http://yoursite.com/2019/06/07/AI技术分享-多样本Dropout/index.html">
 <meta property="og:site_name" content="Krokette&#39;s Code Lab">
-<meta property="og:description" content="《Multi-Sample Dropout for Accelerated Trainingand Better Generalization》">
+<meta property="og:description" content="《Multi-Sample Dropout for Accelerated Training and Better Generalization》">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://wx4.sinaimg.cn/mw690/9df210e9gy1g3su8auhikj20v40h70wa.jpg">
 <meta property="og:image" content="http://wx4.sinaimg.cn/mw690/9df210e9gy1g3su8auhikj20v40h70wa.jpg">
@@ -119,10 +119,10 @@
 <meta property="og:image" content="http://wx1.sinaimg.cn/mw690/9df210e9gy1g3sves7ljej21500kg7ap.jpg">
 <meta property="og:image" content="http://wx4.sinaimg.cn/mw690/9df210e9gy1g3svetjf7qj20ud0ao78q.jpg">
 <meta property="og:image" content="http://wx4.sinaimg.cn/mw690/9df210e9gy1g3svevjqpwj21180bugrt.jpg">
-<meta property="og:updated_time" content="2019-06-07T12:40:36.069Z">
+<meta property="og:updated_time" content="2019-06-07T12:46:06.650Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI技术分享-多样本Dropout">
-<meta name="twitter:description" content="《Multi-Sample Dropout for Accelerated Trainingand Better Generalization》">
+<meta name="twitter:description" content="《Multi-Sample Dropout for Accelerated Training and Better Generalization》">
 <meta name="twitter:image" content="http://wx4.sinaimg.cn/mw690/9df210e9gy1g3su8auhikj20v40h70wa.jpg">
 
 
@@ -423,9 +423,13 @@
                 
               
 
-              <time title="创建时间：2019-06-07 14:40:36" itemprop="dateCreated datePublished" datetime="2019-06-07T14:40:36+02:00">2019-06-07</time>
+              <time title="创建时间：2019-06-07 14:40:36 / 修改时间：14:46:06" itemprop="dateCreated datePublished" datetime="2019-06-07T14:40:36+02:00">2019-06-07</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -500,10 +504,10 @@
       
 
       
-        <p><a href="https://arxiv.org/pdf/1905.09788.pdf" target="_blank" rel="noopener">《Multi-Sample Dropout for Accelerated Training<br>and Better Generalization》</a><br><img src="http://wx4.sinaimg.cn/mw690/9df210e9gy1g3su8auhikj20v40h70wa.jpg" width="600" height="400"></p>
+        <p><a href="https://arxiv.org/pdf/1905.09788.pdf" target="_blank" rel="noopener">《Multi-Sample Dropout for Accelerated Training and Better Generalization》</a><br><img src="http://wx4.sinaimg.cn/mw690/9df210e9gy1g3su8auhikj20v40h70wa.jpg" width="600" height="400"></p>
 <a id="more"></a>
 
-<p>论文名称：《Multi-Sample Dropout for Accelerated Training<br>and Better Generalization》<br>论文地址：<a href="https://arxiv.org/pdf/1905.09788.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1905.09788.pdf</a></p>
+<p>论文名称：《Multi-Sample Dropout for Accelerated Training and Better Generalization》<br>论文地址：<a href="https://arxiv.org/pdf/1905.09788.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1905.09788.pdf</a></p>
 <h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>Dropout是一种简单但有效的正则化技术，可以更好地实现深度神经网络（DNN）的泛化能力; 因此它被广泛用于基于DNN的任务。 在训练期间，Dropout随机丢弃一部分神经元以避免过度拟合。 本文介绍了一种增强的Dropout技术，我们称之为多样本Dropout，用于加速训练和优化泛化能力。 原始Dropout在每次训练迭代中随机创建从输入中选择的子集（称为Dropout样本），而多样本Dropout会产生多个Dropout样本。 计算每个样本的损失，然后将样本损失平均得到最后的损失。 这项技术可以轻松地实现，只需要在复制部分的网络之后，在复制的全连接层之间进行权重分享即可。实验结果表明，多样本Dropout显著加速了训练，减少达到图像分类任务收敛的迭代次数。使用数据来源于ImageNet，CIFAR-10，CIFAR-100和SVHN数据集。 多样本Dropout不会显著增加每次迭代的计算成本，因为大多数的计算时间消耗在Dropout层之前的卷积层中， 这些都没有被复制。实验还表明，使用多样本Dropout的网络训练实现了训练集和验证集的较低错误率和损失。</p>
 <h1 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h1><p>创建多个Dropout样本而非一个。如下图所示：<br><img src="http://wx4.sinaimg.cn/mw690/9df210e9gy1g3su8auhikj20v40h70wa.jpg"></p>
 <h1 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h1><h2 id="无Dropout、传统Dropout和多样本Dropout对比"><a href="#无Dropout、传统Dropout和多样本Dropout对比" class="headerlink" title="无Dropout、传统Dropout和多样本Dropout对比"></a>无Dropout、传统Dropout和多样本Dropout对比</h2><img src="http://wx2.sinaimg.cn/mw690/9df210e9gy1g3suw23v8pj211m0oynbm.jpg">
